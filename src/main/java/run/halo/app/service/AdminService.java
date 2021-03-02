@@ -25,8 +25,6 @@ public interface AdminService {
 
     int REFRESH_TOKEN_EXPIRED_DAYS = 30;
 
-    String APPLICATION_CONFIG_NAME = "application.yaml";
-
     String LOG_PATH = "logs/spring.log";
 
     /**
@@ -91,25 +89,6 @@ public interface AdminService {
      */
     @NonNull
     AuthToken refreshToken(@NonNull String refreshToken);
-
-    /**
-     * Updates halo admin assets.
-     */
-    void updateAdminAssets();
-
-    /**
-     * Get application.yaml content.
-     *
-     * @return application.yaml content
-     */
-    String getApplicationConfig();
-
-    /**
-     * Save application.yaml content.
-     *
-     * @param content new content
-     */
-    void updateApplicationConfig(@NonNull String content);
 
     /**
      * Get halo logs content.

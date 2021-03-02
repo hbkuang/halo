@@ -1,8 +1,7 @@
 package run.halo.app.model.enums;
 
-import org.springframework.util.Assert;
-
 import java.util.stream.Stream;
+import org.springframework.util.Assert;
 
 /**
  * Interface for value enum.
@@ -16,9 +15,9 @@ public interface ValueEnum<T> {
      * Converts value to corresponding enum.
      *
      * @param enumType enum type
-     * @param value    database value
-     * @param <V>      value generic
-     * @param <E>      enum generic
+     * @param value database value
+     * @param <V> value generic
+     * @param <E> enum generic
      * @return corresponding enum
      */
     static <V, E extends ValueEnum<V>> E valueToEnum(Class<E> enumType, V value) {
